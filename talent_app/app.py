@@ -633,7 +633,6 @@ if not sel and rec_bench:
         st.write(f"{rec_count} employees suitable as benchmark for this job level.")
         st.write("""
                  A benchmark cohort has been formulated based on top performers at this job level, to improve the accuracy of capability comparison and insight quality.
-                 
                  Click **Apply Recommended Benchmark**, then select **RUN Matching** to refresh analytics.
                  """)
         if st.button("Use Recommended Benchmark"):
