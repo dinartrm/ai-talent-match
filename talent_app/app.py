@@ -48,8 +48,7 @@ DB_PASS = st.secrets["DB_PASS"]
 OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
 
 engine = create_engine(
-    f"postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}",
-    pool_pre_ping=True
+    f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 )
 
 # --------------------------------------------------
