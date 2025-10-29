@@ -1,0 +1,9 @@
+# Ignore all secrets files anywhere
+**/secrets.toml
+
+# Ignore auto-generated notebooks cache
+**/.ipynb_checkpoints/
+
+# Python cache files
+*.pyc
+__pycache__/
