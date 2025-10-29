@@ -631,7 +631,11 @@ if not sel and rec_bench:
     with st.expander("Recommended Benchmark Found ✅", expanded=True):
         st.write(f"**Top Performers — Grade {db_grade}**")
         st.write(f"{rec_count} employees suitable as benchmark for this job level.")
-        st.write("Recommended to improve comparison quality.")
+        st.write("""
+                 A benchmark cohort has been formulated based on top performers at this job level, to improve the accuracy of capability comparison and insight quality.
+                 
+                 Click **Apply Recommended Benchmark**, then select **RUN Matching** to refresh analytics.
+                 """)
         if st.button("Use Recommended Benchmark"):
             sel = rec_bench.copy()
             st.session_state["bench_ids"] = rec_bench
