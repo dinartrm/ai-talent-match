@@ -4,6 +4,6 @@ numpy
 plotly
 requests
 sqlalchemy>=2.0
-psycopg2-binary
+psycopg2
 python-dotenv
-httpxs
+httpx
