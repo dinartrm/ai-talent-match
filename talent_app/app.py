@@ -148,18 +148,18 @@ def build_sql(resolved_selected_ids, resolved_grade):
     ),
     benchmark AS (
       SELECT
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "SEA")              AS b_sea,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "IDS")              AS b_ids,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "CEX")              AS b_cex,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "VCU")              AS b_vcu,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "CSI")              AS b_csi,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY cognitive_index)    AS b_cognitive,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "Papi_P")           AS b_p,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "Papi_W")           AS b_w,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "Papi_I")           AS b_i,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY tenure_years)       AS b_tenure,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY grade_num)          AS b_grade,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY strength_match_score) AS b_strength
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "SEA"::float)              AS b_sea,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "IDS"::float)              AS b_ids,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "CEX"::float)              AS b_cex,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "VCU"::float)              AS b_vcu,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "CSI"::float)              AS b_csi,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY cognitive_index::float)    AS b_cognitive,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "Papi_P"::float)           AS b_p,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "Papi_W"::float)           AS b_w,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "Papi_I"::float)           AS b_i,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY tenure_years::float)       AS b_tenure,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY grade_num::float)          AS b_grade,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY strength_match_score::float) AS b_strength
       FROM pool
       WHERE {where_bench}
     ),
