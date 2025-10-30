@@ -1,10 +1,9 @@
-🔗 **Live App:** [AI Talent Match Dashboard (Streamlit Deployment)](https://ai-talent-match-dinartrimurti.streamlit.app/)  
-Explore the live, fully deployed version of the AI Talent Match & Storytelling Dashboard.
-
-
 # AI Talent Match & Storytelling Dashboard
 
 An intelligent HR analytics system that compares employees’ capabilities against benchmark top performers to identify best-fit candidates for specific roles. The app provides data-driven visual analytics, AI-generated job profiles, and automated HR insights to support **Talent Intelligence and Succession Planning**.
+
+🔗 **Live App:** [AI Talent Match Dashboard (Streamlit Deployment)](https://ai-talent-match-dinartrimurti.streamlit.app/)  
+Explore the live, fully deployed version of the AI Talent Match & Storytelling Dashboard.
 
 ---
 
